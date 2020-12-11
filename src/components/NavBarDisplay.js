@@ -11,6 +11,7 @@ import {
 import {useHistory} from 'react-router-dom'
 import AuthModal from "./AuthModal"
 import {toast} from 'react-toastify'
+import {ImInstagram } from 'react-icons/im';
 
 const NavBarDisplay = ({loggedIn, setLoggedIn}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const NavBarDisplay = ({loggedIn, setLoggedIn}) => {
     return (
     <div>
         <Navbar color="dark" dark expand="md">
-            <NavbarBrand style={{cursor:"pointer"}} onClick= {() => {history.push("/")}}>Nextagram</NavbarBrand>
+            <NavbarBrand style={{cursor:"pointer"}} onClick= {() => {history.push("/")}}><i><ImInstagram/></i>Nextagram</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
