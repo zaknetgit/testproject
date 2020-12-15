@@ -25,7 +25,7 @@ const UploadPage = () => {
           formData.append("image", imageFile);
         
           axios.post("https://insta.nextacademy.com/api/v1/images/", formData, {
-              headers: { Authorization: "Bearer" + token }
+              headers: { Authorization: "Bearer " + token }
             })
             .then(response => {
               if (response.data.success) {
@@ -37,7 +37,7 @@ const UploadPage = () => {
               }
             )
               .catch(error => {
-                console.log(error.response);
+                console.log(error);
               })
             }
           }>
@@ -82,7 +82,6 @@ const UploadPage = () => {
           </h3>
         )}
       </div>
-      )
     </div>
   )
 }
